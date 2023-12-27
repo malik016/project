@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
+
+nav {
+    background-color: rgb(63, 14, 63);
+    color: white;
+    height: 60px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto Slab', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto Slab', serif;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+
+    background-color: rgb(100, 69, 129);
+
+}
+
+.info {
+    font-size: 25px;
+}
+
+.gameinfo {
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', sans-serif;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0;
+    padding: 1px 18px;
+    background-color: #f3e7f9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'baloo bahina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line {
+    background-color: black;
+    width: 3px;
+    height: 30vw;
+    position: absolute;
+}
+
+@media screen and (max-width: 800px) {
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+
+    .gameinfo {
+        margin-top: 34px;
+    }
+
+    .gameinfo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        grid-template-rows: (3, 20vw);
+        grid-template-columns: (3, 20vw);
+        position: relative;
+    }
+}
